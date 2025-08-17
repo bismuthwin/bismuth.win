@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Flex, Image, rem, Text, Title } from "@mantine/core";
+import { Container, Flex, rem, Text, Title } from "@mantine/core";
 import {
     IconBrandGithub,
     IconBrandSteam,
@@ -16,6 +16,7 @@ import {
 
 import { Routes } from "@/constants";
 import { NavCard, NavCardProps, Social } from "@/modules/HomePage";
+import { LogoInBackground } from "@/modules/layout";
 
 const links: NavCardProps[] = [
     {
@@ -48,12 +49,10 @@ const links: NavCardProps[] = [
     },
 ];
 
-export default function Home() {
+export default function HomePage() {
     return (
         <>
-            <Flex pos={"absolute"} w={"100%"} h={"100%"} style={{ flexGrow: 1 }} align={"center"} justify={"center"}>
-                <Image src={"/img/bismuth-gray.svg"} alt={"bismuth logo"} w={"95vh"} opacity={0.025} />
-            </Flex>
+            <LogoInBackground />
             <Container fluid h={"100dvh"} w={"100%"} pl={rem(200)} pr={rem(100)}>
                 <Flex w={"100%"} h={"100%"} justify={"space-between"} align={"center"}>
                     <Flex direction={"column"} gap={"sm"}>

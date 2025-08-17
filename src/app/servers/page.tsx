@@ -1,16 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Button, Container, Flex, Image, rem, Title } from "@mantine/core";
+import { Button, Container, Flex, rem, Title } from "@mantine/core";
 
 import { Routes } from "@/constants";
+import { LogoInBackground } from "@/modules/layout";
 
-export default function Home() {
+export default function ServersPage() {
     return (
         <>
-            <Flex pos={"absolute"} w={"100%"} h={"100%"} style={{ flexGrow: 1 }} align={"center"} justify={"center"}>
-                <Image src={"/img/bismuth-gray.svg"} alt={"bismuth logo"} w={"95vh"} opacity={0.025} />
-            </Flex>
+            <LogoInBackground />
             <Container fluid h={"100dvh"} w={"100%"}>
                 <Flex w={"100%"} h={"100%"} justify={"center"} align={"center"} direction={"column"} gap={"xl"}>
                     <Title size={rem(75)}>servers page work in progress teehee</Title>
