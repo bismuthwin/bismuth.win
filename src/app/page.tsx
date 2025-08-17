@@ -35,10 +35,9 @@ const links: NavCardProps[] = [
     },
     {
         name: "The Team",
-        description: "",
+        description: "The team, the group, the members, the collective, whatever you want to call us, here we are.",
         href: Routes.TEAM,
         Icon: IconPlayBasketball,
-        disabled: true,
     },
     {
         name: "About Bismuth",
