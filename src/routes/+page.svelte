@@ -35,7 +35,7 @@
 			<i class="hn hn-github"></i>
 		</SocialLink>
 		<SocialLink href="https://cat.basil.florist" label="github">
-			<img src="/src/lib/assets/tequila.jpg" alt="cat" />
+			<img src="tequila.jpg" alt="cat" />
 		</SocialLink>
 		<SocialLink href="https://www.youtube.com/watch?v=fq3abPnEEGE" label="mystery">
 			<i class="hn hn-question-solid"></i>

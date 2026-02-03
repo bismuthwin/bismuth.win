@@ -12,7 +12,7 @@
 			name: 'Flowyan',
 			role: ['Lead Developer', 'Owner'],
 			bio: 'Flowyan is the lead developer and owner of BISMUTH.',
-			photoUrl: '/src/lib/assets/team/flowyan.jpg',
+			photoUrl: '/team/flowyan.jpg',
 			socialLinks: [
 				{ platform: 'GitHub', url: 'https://github.com/flowyan' },
 				{ platform: 'Twitter', url: 'https://x.com/flowyan_' },
@@ -23,7 +23,7 @@
 			name: 'Chutoy',
 			role: ['Server Administrator', 'Developer'],
 			bio: 'Chutoy is responsible for maintaining the servers and ensures they run smoothly and without issues.',
-			photoUrl: '/src/lib/assets/team/chutoy.jpg',
+			photoUrl: '/team/chutoy.jpg',
 			socialLinks: [
 				{ platform: 'GitHub', url: 'https://github.com/chutoyjohn' },
 				{ platform: 'Twitter', url: 'https://x.com/chutoyjohn' },
