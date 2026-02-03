@@ -1,0 +1,35 @@
+:root {
+    --font-family: 'Lexend Variable', sans-serif;
+
+    font-family: var(--font-family);
+    animation: rainbowBg 10s infinite alternate;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes rainbowBg {
+    0% {
+        background-color: #2d1b1b;
+    }
+    16% {
+        background-color: #2d241b;
+    }
+    32% {
+        background-color: #2d2d1b;
+    }
+    48% {
+        background-color: #1b2d1b;
+    }
+    64% {
+        background-color: #1b1b2d;
+    }
+    80% {
+        background-color: #241b2d;
+    }
+    100% {
+        background-color: #2d1b2d;
+    }
+}
