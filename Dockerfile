@@ -1,40 +1,38 @@
-# Stage 1: Build
-FROM oven/bun:latest AS builder
-
+# ---- deps ----
+FROM oven/bun:1 AS deps
 WORKDIR /app
 
-# Copy package files
-COPY package.json bun.lockb ./
-
-# Install dependencies
+# Install deps (cache-friendly)
+COPY package.json bun.lockb* ./
 RUN bun install --frozen-lockfile
 
-# Copy source code
-COPY . .
-
-# Build the application
-RUN bun run build
-
-# Stage 2: Runtime
-FROM oven/bun:latest
-
+# ---- build ----
+FROM oven/bun:1 AS build
 WORKDIR /app
 
-# Copy package files
-COPY package.json bun.lockb ./
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
 
-# Install only production dependencies
-RUN bun install --frozen-lockfile --production
+# SvelteKit build (adapter-node => outputs /build)
+RUN bun run build
 
-# Copy built application from builder stage
-COPY --from=builder /app/build ./build
+# ---- run ----
+FROM oven/bun:1-slim AS runner
+WORKDIR /app
 
-# Expose port
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+ENV PORT=3000
+
+# If you have runtime deps (not fully bundled), keep node_modules:
+COPY --from=build /app/node_modules ./node_modules
+
+# adapter-node output
+COPY --from=build /app/build ./build
+# (optional) if you need files like package.json for runtime metadata
+COPY --from=build /app/package.json ./package.json
+
 EXPOSE 3000
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:3000 || exit 1
-
-# Start the application
-CMD ["node", "build"]
+# adapter-node entrypoint
+CMD ["bun", "build/index.js"]
