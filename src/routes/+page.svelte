@@ -88,6 +88,7 @@
 			padding: 1rem 2rem;
 			background-color: white;
 			text-decoration: none;
+			text-align: center;
 			font-size: 1.5rem;
 			transition:
 				background-color 0.3s ease,
@@ -142,6 +143,28 @@
 		}
 		100% {
 			opacity: 1;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.title {
+			font-size: 4rem;
+		}
+
+		.description {
+			font-size: 1rem;
+		}
+
+		.routes {
+			flex-direction: column;
+			align-items: center;
+
+			.route {
+				width: 100%;
+				margin: 0.5rem 0;
+				font-size: 1.2rem;
+				padding: 0.75rem 1.5rem;
+			}
 		}
 	}
 </style>
