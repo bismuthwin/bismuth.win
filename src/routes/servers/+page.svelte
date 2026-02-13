@@ -1,6 +1,8 @@
 <script lang="ts">
+	import SEO from '$lib/components/SEO.svelte';
 </script>
 
+<SEO title="Servers" description="Game servers hosted by Bismuth" />
 <div class="p-8 flex flex-col items-center gap-4">
 	<h1>Servers</h1>
 	<h2>

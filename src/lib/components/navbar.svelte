@@ -97,4 +97,22 @@
 			border-color: #ff4343;
 		}
 	}
+
+	@media (max-width: 768px) {
+		nav {
+			position: fixed;
+			top: unset;
+			bottom: 0;
+			flex-direction: column;
+			height: auto;
+			padding: 0.5rem 1rem;
+		}
+
+		.linksRight {
+			position: static;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 0.5rem;
+		}
+	}
 </style>
