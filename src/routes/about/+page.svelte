@@ -1,6 +1,8 @@
 <script lang="ts">
+	import SEO from '$lib/components/SEO.svelte';
 </script>
 
+<SEO title="About" description="About Bismuth" />
 <div class="p-8 flex flex-col items-center gap-4">
 	<h1>About Bismuth</h1>
 	<h2>

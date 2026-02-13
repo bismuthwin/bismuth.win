@@ -1,4 +1,6 @@
 <script lang="ts">
+	import SEO from '$lib/components/SEO.svelte';
+
 	interface TeamMember {
 		name: string;
 		role: string[];
@@ -33,6 +35,7 @@
 	];
 </script>
 
+<SEO title="Team" description="The team behind Bismuth" />
 <div class="p-8 flex flex-col items-center gap-4">
 	<h1>The Team</h1>
 	<h2>

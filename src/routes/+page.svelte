@@ -1,5 +1,6 @@
 <script lang="ts">
 	import LogoOverlay from '$lib/components/logoOverlay.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 	import SocialLink from '$lib/components/socialLink.svelte';
 
 	const title = 'BISMUTH';
@@ -7,6 +8,7 @@
 		'A small group of friends creating and developing all sorts of stuff together';
 </script>
 
+<SEO title="Home" {description} />
 <div class="flex min-h-screen flex-col items-center justify-center">
 	<h1 class="title">
 		{#each title as letter}
